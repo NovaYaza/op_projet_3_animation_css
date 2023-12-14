@@ -6,3 +6,47 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+:root {
+/* Couleurs */
+--primary: #9356DC;
+--secondary: #FF79DA;
+--tertiary: #99E2D0;
+--background-principal: #f6f6f6;
+--background-localisation: #EAEAEA;
+}
+
+h1 {
+  color: var(--primary);
+}
+
+body {
+
+}
+
+/* header */
+.box_logo_header {
+  
+}
+
+.logo_name {
+  font-family: Shrikhand;
+  font-size: 1.8em;
+  display: flex;
+  justify-content: center;
+}
+
+.localisation_header {
+  display: flex;
+  justify-content: center;
+  background-color: var(--background-localisation);
+}
+
+.p_header {
+  font-family: Roboto;
+}
+
+/* Presentation accueil */
+.presentation_home {
+  background-color: var(--background-principal);
+}
