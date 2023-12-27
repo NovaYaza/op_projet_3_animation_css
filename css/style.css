@@ -14,11 +14,15 @@
 --tertiary: #99E2D0;
 --background-principal: #f6f6f6;
 --background-localisation: #EAEAEA;
---background-green: #99E2D0;
---green: #008766;
+--background-color-new-resto: #99E2D0;
+--background-description-menu: #fff;
+--background-card-resto: #fff;
+--border-title-menu: #99E2D0;
+--text-bouton: #fff;
+--text-new-resto: #008766;
 --footer: #353535;
---white: #fff;
---black: #000;
+--title-link-footer: #fff;
+--color-ancre: #000;
 }
 
 body {
@@ -31,7 +35,7 @@ img {
 }
 
 a {
-  color: var(--black);
+  color: var(--color-ancre);
 }
 
 /***** Modifications homepage *****/
@@ -79,7 +83,7 @@ a {
 .bouton_explorer {
   margin-top: 30px;
   font-size: 1em;
-  color: var(--white);
+  color: var(--text-bouton);
   padding: 1em 1.4em 1em 1.4em;
   border-radius: 30px;
   border: none;
@@ -157,8 +161,8 @@ a {
   align-items: center;
   position: absolute;
   margin: 15px 15px 0px 0px;
-  color: var(--green);
-  background-color: var(--background-green);
+  color: var(--text-new-resto);
+  background-color: var(--background-color-new-resto);
   border-radius: 2px;
   width: 80px;
   height: 25px;
@@ -167,7 +171,7 @@ a {
 
 /* Articles restaurants*/
 .article_restaurant_homepage {
-  background-color: var(--white);
+  background-color: var(--background-card-resto);
   border-radius: 15px;
   margin-bottom: 1.2em;
 }
@@ -253,7 +257,7 @@ a {
 }
 
 .border_bottom_title {
-  border: 2px solid var(--background-green);
+  border: 2px solid var(--border-title-menu);
   width: 40px;
 }
 
@@ -261,7 +265,7 @@ a {
   margin: 1em 0em 1em 0em;
   padding: 1em;
   border-radius: 20px;
-  background-color: var(--white);
+  background-color: var(--background-description-menu);
   box-shadow: rgba(0, 0, 0, 0.10) 0px 5px 8px;
 }
 
@@ -286,7 +290,7 @@ a {
 .bouton_commander {
   margin-top: 30px;
   font-size: 1em;
-  color: var(--white);
+  color: var(--text-bouton);
   padding: 1em 3em 1em 3em;
   border-radius: 30px;
   border: none;
@@ -306,7 +310,7 @@ a {
 }
 
 .title_footer {
-  color: var(--white);
+  color: var(--title-link-footer);
   font-family: Shrikhand;
   font-size: 18px;
   margin-bottom: 0.6em;
@@ -319,7 +323,7 @@ a {
 
 .link_footer {
   text-decoration: none;
-  color: var(--white);
+  color: var(--title-link-footer);
   margin-bottom: 0.4em;
 }
 
