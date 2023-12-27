@@ -30,6 +30,11 @@ img {
   height: 275px;
 }
 
+a {
+  color: var(--black);
+}
+
+/***** Modifications homepage *****/
 /* header */
 .logo_name {
   font-family: Shrikhand;
@@ -53,7 +58,6 @@ img {
   padding-left: 15px;
 }
 
-/***** Modifications homepage *****/
 /* Presentation accueil */
 .presentation_home {
   background-color: var(--background-principal);
@@ -195,6 +199,104 @@ img {
   border: none;
   background-color: transparent;
   cursor: pointer;
+}
+
+/***** Modifications page restaurant *****/
+/* Header */
+.box_logo_header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bouton_retour {
+  margin-left: -350px;
+  position: absolute;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+.img_header img {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Paramètres généraux des menus des restaurants */
+.info_restaurant {
+  background-color: var(--background-principal);
+  padding-top: 30px;
+  border-radius: 40px 40px 0px 0px;
+  margin-top: -3.5em;
+  position: relative;
+  z-index: 1;
+  padding: 2em 1.2em 2em 1.2em;
+}
+
+/* Paramètres du titre et du coeur */
+.name_heart_restaurant {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title_page_restaurant {
+  font-size: 28px;
+  font-family: Shrikhand;
+}
+
+/* Paramètres du contenus des menus */
+.title_h2_menu {
+  font-size: 1em;
+  font-weight: 300;
+  margin-bottom: 0.3em;
+  margin-top: 2em;
+}
+
+.border_bottom_title {
+  border: 2px solid var(--background-green);
+  width: 40px;
+}
+
+.box_content_menu {
+  margin: 1em 0em 1em 0em;
+  padding: 1em;
+  border-radius: 20px;
+  background-color: var(--white);
+  box-shadow: rgba(0, 0, 0, 0.10) 0px 5px 8px;
+}
+
+.box_content_menu > h3 {
+  font-size: 18px;
+}
+
+.info_prix_repas > p {
+  font-size: 15px;
+}
+
+.info_prix_repas {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.3em;
+}
+
+.price_menu {
+  font-weight: bold;
+}
+
+.bouton_commander {
+  margin-top: 30px;
+  font-size: 1em;
+  color: var(--white);
+  padding: 1em 3em 1em 3em;
+  border-radius: 30px;
+  border: none;
+  background: linear-gradient(180deg, #FF79DA -11.44%, #9356DC 123.93%);
+  box-shadow: rgba(0, 0, 0, 0.22) 0px 4px 5px;
+  cursor: pointer;
+}
+
+.center_bouton_commander {
+  text-align: center;
 }
 
 /*** Footer ***/
