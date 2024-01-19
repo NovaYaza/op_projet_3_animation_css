@@ -36,6 +36,14 @@ img {
 
 a {
   color: var(--color-ancre);
+  text-decoration: none;
+}
+
+/***** Animations *****/
+/* Animations boutons */
+.bouton_explorer:hover, .bouton_commander:hover {
+  background: linear-gradient(180deg, #FF79DA 20.44%, #9356DC 123.93%);
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 5px;
 }
 
 /***** Modifications homepage *****/
@@ -109,7 +117,7 @@ a {
 .regles_fontionnement {
   display: flex;
   margin-bottom: 2em;
-  padding: 2em;
+  padding: 2em 0em 2em 2em;
   border-radius: 20px;
   background-color: var(--background-principal);
   box-shadow: rgba(0, 0, 0, 0.10) 0px 5px 8px;
@@ -208,14 +216,20 @@ a {
 /***** Modifications page restaurant *****/
 /* Header */
 .box_logo_header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
+}
+
+.logo_name_restaurants {
+  text-align: center;
+  font-family: Shrikhand;
+  font-size: 1.8em;
+  padding: 10px 0px 4px 0px;
 }
 
 .bouton_retour {
-  margin-left: -350px;
   position: absolute;
+  top: 20px;
+  left: 20px;
   cursor: pointer;
   border: none;
   background-color: transparent;
@@ -329,4 +343,200 @@ a {
 
 .link_footer i {
   margin-right: 1em;
+}
+
+/***** Responsive Desktop *****/
+@media (min-width: 1245px) {
+  /*** Homepage ***/
+  /* body {
+    max-width: 1920px;
+    margin: auto;
+  } */
+  
+  /* Presentation */
+  .presentation_home > h1 {
+    font-size: 2.5em;
+  }
+  
+  .presentation_home > p {
+    margin-top: 1em;
+  }
+
+  /* Fonctionnement */
+  .fonctionnement {
+    padding: 0em 11em 0em 11em;
+  }
+
+  .container_regles_fonctionnement {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .regles_fontionnement {
+    width: 30%;
+    /* padding: 2em 0em 2em 2em; */
+  }
+
+  /* .fa_fonctionnement_margin {
+    margin-right: 1.5em;
+  } */
+
+  /* Restaurants */
+  .restaurants {
+    padding: 2em 11em 0em 11em;
+  }
+
+  .responsive_restaurants_homepage { 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .responsive_restaurants_homepage > a {
+    width: 45%;
+  }
+
+  .article_restaurant_homepage {
+    margin-bottom: 3.2em;
+  }
+
+  /* Footer */
+  .footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    padding: 3em 5em 1.2em 0em;
+  }
+
+  .container_links_footer {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .link_footer {
+    padding-right: 0.8em;
+  }
+
+  .link_footer_partenaire {
+    padding-right: 3em;
+  }
+
+  .link_footer_contact {
+    padding-right: 6em;
+  }
+
+  /*** Pages Restaurants ***/
+  .info_restaurant {
+    max-width: 70%;
+    margin: -3.5em auto 0em auto;
+    padding: 3em 10em 2.5em 10em;
+  }
+
+  .name_heart_restaurant {
+    justify-content: center;
+    margin-bottom: 4em;
+  }
+
+  .title_page_restaurant {
+    padding-right: 1em;
+  }
+
+  .title_h2_menu {
+    margin-top: 3em;
+  }
+}
+
+/***** Responsive Tablet *****/
+@media (min-width: 768px) and (max-width:1244px) {
+  /*** Homepage ***/
+  /* Fonctionnement */
+  .fonctionnement {
+    margin: 2em 0em 1em 0em;
+  }
+
+  .title_fonctionnement {
+    padding: 0em 1em 0em 0.5em;
+  }
+
+  .container_regles_fonctionnement {
+    display: flex;
+    justify-content: space-around;
+    padding: 0em 1em 0em 1em;
+  }
+
+  .regles_fontionnement {
+    justify-content: center;
+    width: 30%;
+    padding: 2em 0em 2em 0em;
+  }
+
+  .fa_fonctionnement_margin {
+    margin-right: 0.5em;
+  }
+
+  .chiffre_fontionnement {
+    margin: -3.2em 0em 0em 0em;
+  }
+
+  /* Restaurants */
+  .restaurants {
+    padding: 1.5em 1.2em 3em 1.2em;
+  }
+
+  .responsive_restaurants_homepage {
+    padding: 1em 3em 0em 3em;
+  }
+
+  .title_restaurants_homepage {
+    padding: 0em 1em 0em 0.5em;
+  }
+
+  .article_restaurant_homepage {
+    margin-bottom: 3em;
+  }
+
+  /* Footer */
+  .footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: 3em 2em 0em 0em;
+  }
+
+  .container_links_footer {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .link_footer {
+    padding-right: 0.8em;
+  }
+
+  .link_footer_partenaire {
+    padding-right: 1.8em;
+  }
+
+  .link_footer_contact {
+    padding-right: 3em;
+  }
+
+  /*** Pages Restaurants ***/
+  .info_restaurant {
+    max-width: 75%;
+    margin: -3.5em auto 0em auto;
+    padding: 3em 5em 2.5em 5em;
+  }
+
+  .name_heart_restaurant {
+    justify-content: center;
+    margin-bottom: 3em;
+  }
+
+  .title_page_restaurant {
+    padding-right: 1em;
+  }
+
+  .title_h2_menu {
+    margin-top: 3em;
+  }
 }
