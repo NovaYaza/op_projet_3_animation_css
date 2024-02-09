@@ -17,7 +17,9 @@
 --background-color-new-resto: #99E2D0;
 --background-description-menu: #fff;
 --background-card-resto: #fff;
+--fa-check: #fff;
 --border-title-menu: #99E2D0;
+--check-menu: #99E2D0;
 --text-bouton: #fff;
 --text-new-resto: #008766;
 --footer: #353535;
@@ -43,7 +45,192 @@ a {
 /* Animations boutons */
 .bouton_explorer:hover, .bouton_commander:hover {
   background: linear-gradient(180deg, #FF79DA 20.44%, #9356DC 123.93%);
-  box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 5px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 6px 10px;
+}
+
+/* Animations boutons coeurs */
+.fa-heart {
+  position: absolute;
+  right: 1em;
+}
+
+.fa_heart_hover {
+  color: transparent;
+}
+
+.fa_heart_hover:hover::before {
+  background: linear-gradient(180deg, #FF79DA 20.44%, #9356DC 123.93%);
+  background-clip: text;
+  animation: hearth_button 0.6s ease;
+}
+
+@keyframes hearth_button {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Animations apparitions menu */
+/* .title_h2_menu, .border_bottom_title {
+  opacity: 0;
+  transform: translateX(-500px);
+  animation: menu_apparition 0.6s ease forwards;
+}
+
+.apparition_animation > article {
+  opacity: 0;
+  transform: translateX(-500px);
+}
+
+.apparition_animation > article:nth-child(3) {
+  animation: menu_apparition 0.8s 0.2s ease-in forwards;
+}
+
+.apparition_animation > article:nth-child(4) {
+  animation: menu_apparition 0.8s 0.4s ease-in forwards;
+}
+
+.apparition_animation > article:nth-child(5) {
+  animation: menu_apparition 0.8s 0.6s ease-in forwards;
+}
+
+.apparition_animation > article:nth-child(6) {
+  animation: menu_apparition 0.8s 0.8s ease-in forwards;
+}
+
+@keyframes menu_apparition {
+  80% {
+    opacity: 0.3;
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+} */
+
+/* Animations Loader */
+.container_loader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(180deg, #FF79DA 20.44%, #9356DC 123.93%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  animation: Disparition 3s ease forwards; 
+  z-index: 99;
+}
+
+.loader {
+  border: 10px solid #f3f3f3;
+  border-top: 10px solid #000;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  animation: spin 1s linear infinite;
+}
+
+.p_loader {
+  margin-top: 0.5em;
+  color: #fff;
+  font-weight: bold;
+}
+
+.logo_name_loader {
+  font-size: 2em;
+  font-family: Shrikhand;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes Disparition {
+  0% {
+    opacity: 1;
+    z-index: 99;
+  }
+
+  95% {
+    opacity: 1;
+    z-index: 99;
+  }
+
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+/* Animations ajout de plats */
+.box_content_menu {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* .box_content_menu:hover {
+   width: 100%;
+} */
+
+.check_menu {
+  position: absolute;
+  top: 0;
+  right: 0; 
+  height: 100%;
+  background-color: var(--check-menu);
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.check_menu i {
+  color: var(--fa-check);
+}
+
+.info_prix_repas .info_text_menu {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding-right: 1em;
+}
+
+.box_content_menu:hover .check_menu {
+  animation: Check 0.4s ease forwards;
+}
+
+.box_content_menu:hover .info_prix_repas {
+  animation: info_prix_repas 0.4s ease forwards;
+}
+
+@keyframes Check {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    opacity: 1;
+    width: 20%;
+  }
+}
+
+@keyframes info_prix_repas {
+  0% {
+    width: 100%;
+  }
+
+  100% {
+    width: 80%;
+  }
 }
 
 /***** Modifications homepage *****/
@@ -204,10 +391,12 @@ a {
 
 /* Boutons coeurs cartes restaurants */
 .fa_heart_card {
+  position: relative;
   padding: 0.7em 2em 0em 0em;
 }
 
 .button_fa_hearth {
+  padding: 0.3em 0em 0.3em 0em;
   border: none;
   background-color: transparent;
   cursor: pointer;
