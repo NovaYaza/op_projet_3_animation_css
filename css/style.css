@@ -61,10 +61,10 @@ a {
 .fa_heart_hover:hover::before {
   background: linear-gradient(180deg, #FF79DA 20.44%, #9356DC 123.93%);
   background-clip: text;
-  animation: hearth_button 0.6s ease;
+  animation: heart_button 0.6s ease;
 }
 
-@keyframes hearth_button {
+@keyframes heart_button {
   0% {
     opacity: 0;
   }
@@ -74,7 +74,7 @@ a {
 }
 
 /* Animations apparitions menu */
-/* .title_h2_menu, .border_bottom_title {
+.title_h2_menu, .border_bottom_title {
   opacity: 0;
   transform: translateX(-500px);
   animation: menu_apparition 0.6s ease forwards;
@@ -110,7 +110,7 @@ a {
     opacity: 1;
     transform: none;
   }
-} */
+}
 
 /* Animations Loader */
 .container_loader {
@@ -177,10 +177,6 @@ a {
   cursor: pointer;
 }
 
-/* .box_content_menu:hover {
-   width: 100%;
-} */
-
 .check_menu {
   position: absolute;
   top: 0;
@@ -191,10 +187,17 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 0%;
+  transition: opacity 0.4s, width 0.4s; 
 }
 
 .check_menu i {
   color: var(--fa-check);
+}
+
+.info_prix_repas {
+  width: 100%;
+  transition: width 0.4s; 
 }
 
 .info_prix_repas .info_text_menu {
@@ -205,32 +208,12 @@ a {
 }
 
 .box_content_menu:hover .check_menu {
-  animation: Check 0.4s ease forwards;
+  width: 20%; 
+  opacity: 1; 
 }
 
 .box_content_menu:hover .info_prix_repas {
-  animation: info_prix_repas 0.4s ease forwards;
-}
-
-@keyframes Check {
-  0% {
-    width: 0%;
-  }
-
-  100% {
-    opacity: 1;
-    width: 20%;
-  }
-}
-
-@keyframes info_prix_repas {
-  0% {
-    width: 100%;
-  }
-
-  100% {
-    width: 80%;
-  }
+  width: 80%; 
 }
 
 /***** Modifications homepage *****/
@@ -395,7 +378,7 @@ a {
   padding: 0.7em 2em 0em 0em;
 }
 
-.button_fa_hearth {
+.button_fa_heart {
   padding: 0.3em 0em 0.3em 0em;
   border: none;
   background-color: transparent;
@@ -444,6 +427,7 @@ a {
 .name_heart_restaurant {
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 
 .title_page_restaurant {
@@ -563,12 +547,7 @@ a {
 
   .regles_fontionnement {
     width: 30%;
-    /* padding: 2em 0em 2em 2em; */
   }
-
-  /* .fa_fonctionnement_margin {
-    margin-right: 1.5em;
-  } */
 
   /* Restaurants */
   .restaurants {
