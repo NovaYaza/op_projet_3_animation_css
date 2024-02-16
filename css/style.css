@@ -137,12 +137,6 @@ a {
   animation: spin 1s linear infinite;
 }
 
-.p_loader {
-  margin-top: 0.5em;
-  color: #fff;
-  font-weight: bold;
-}
-
 .logo_name_loader {
   font-size: 2em;
   font-family: Shrikhand;
@@ -382,15 +376,17 @@ a {
 /* Boutons coeurs cartes restaurants */
 .fa_heart_card {
   position: relative;
-  padding: 0.7em 2em 0em 0em;
+  padding: 1.5em 0.2em 0.3em 0.3em;
+  cursor: pointer;
+  font-size: 0.8em;
 }
 
-.button_fa_heart {
+/* .button_fa_heart {
   padding: 0.3em 0em 0.3em 0em;
   border: none;
   background-color: transparent;
   cursor: pointer;
-}
+} */
 
 /***** Modifications page restaurant *****/
 /* Header */
@@ -619,6 +615,10 @@ a {
   .title_h2_menu {
     margin-top: 3em;
   }
+
+  .title_page_restaurant {
+    padding-right: 2.5em;
+  }
 }
 
 /***** Responsive Tablet *****/
@@ -713,5 +713,9 @@ a {
 
   .title_h2_menu {
     margin-top: 3em;
+  }
+
+  .title_page_restaurant {
+    padding-right: 2.5em;
   }
 }
